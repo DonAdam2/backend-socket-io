@@ -1,9 +1,13 @@
-var express = require('express');
-var socket = require('socket.io');
+const express = require('express'),
+    cors = require('cors'),
+    socket = require('socket.io');
 
 // App setup
-var app = express();
-var server = app.listen(4000, function(){
+const app = express();
+//enable all cors
+app.use(cors());
+//start  the server
+const server = app.listen(4000, function(){
     console.log('listening to requests on port 4000');
 });
 
@@ -11,7 +15,7 @@ var server = app.listen(4000, function(){
 app.use(express.static('public'));
 
 // Socket setup
-var io = socket(server);
+const io = socket(server);
 
 io.on('connection', function(socket){
     console.log('Made socket connection', socket.id);
