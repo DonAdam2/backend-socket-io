@@ -1,6 +1,6 @@
 ## overview:
 
-- This app is the backend of [this repository](https://github.com/react-custom-projects/chat-socket-io)
+- This app is the backend of [this repository](https://github.com/DonAdam2/frontend-socket-io)
 - Simple react app which shows how to create a chat app using **socket.io**
 
 ## Created using:
@@ -12,8 +12,8 @@
 
 ### Development:
 
-- Clone repo => `git clone git@github.com:Node-Js-Organization/chat-web-socket.git`
-- Navigate to project directory `cd chat-web-socket`
+- Clone repo => `git clone git@github.com:DonAdam2/backend-socket-io.git`
+- Navigate to project directory `cd backend-socket-io`
 - Install dependencies => `yarn install`
 - Start the development server => `yarn start`
 - Or start the development server with hot reloading => `yarn start-dev`
