@@ -24,10 +24,12 @@ io.on('connection', function(socket){
     console.log('Made socket connection', socket.id);
 
     socket.on('chat', function(data){
+        //send data to all connected clients including sender
         io.sockets.emit('chat', data);
     });
 
     socket.on('typing', function(data) {
+        //send data to all connected clients except sender
         socket.broadcast.emit('typing', data);
     });
 });
