@@ -17,7 +17,7 @@ app.use(express.static('public'));
 // Socket setup
 const io = socket(server, {
     //set allowed origins
-    cors: {origin: ["http://localhost:3000"]}
+    cors: {origin: ["http://localhost:3000", "http://localhost:8000"]}
 });
 
 io.on('connection', function(socket){
