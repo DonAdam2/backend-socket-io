@@ -15,7 +15,10 @@ const server = app.listen(4000, function(){
 app.use(express.static('public'));
 
 // Socket setup
-const io = socket(server);
+const io = socket(server, {
+    //set allowed origins
+    cors: {origin: ["http://localhost:3000"]}
+});
 
 io.on('connection', function(socket){
     console.log('Made socket connection', socket.id);
