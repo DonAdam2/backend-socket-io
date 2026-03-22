@@ -7,7 +7,10 @@ const app = express();
 //enable all cors
 app.use(cors());
 //start  the server
-const server = app.listen(4000, function(){
+const server = app.listen(4000, function(error){
+    if (error) {
+        throw error;
+    }
     console.log('listening to requests on port 4000');
 });
 
